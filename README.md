@@ -1,6 +1,6 @@
 # HttpHelper
-基于HttpWebRequest的Http客户端 
+Based on HttpWebRequest of Httpclient 
 
-特性:
-*支持http/https 
-*支持跨域Cookies 
+characteristic:
+support http/https 
+Support cross-domain Cookies 
