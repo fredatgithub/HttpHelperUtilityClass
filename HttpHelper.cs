@@ -17,14 +17,14 @@ using System.Security.Cryptography.X509Certificates;
 namespace RedXuCSharpClass
 {
 	/// <summary>
-	/// Http操作类.
+	/// Http Operation class.
 	/// </summary>
 	public class HttpHelper
 	{
 		private const int ConnectionLimit = 100;
-		//编码
+		//coding
 		private Encoding _encoding = Encoding.Default;
-		//浏览器类型
+		//browser type
 		private string[] _useragents = new string[]{
 			"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36",
 			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)",
@@ -33,11 +33,11 @@ namespace RedXuCSharpClass
 		};
 		
 		private String _useragent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36";
-		//接受类型
+		//accept type
 		private String _accept = "text/html, application/xhtml+xml, application/xml, */*";
-		//超时时间
+		//overtime time
 		private int _timeout = 30*1000;
-		//类型
+		// type
 		private string _contenttype = "application/x-www-form-urlencoded";
 		//cookies
 		private String _cookies = "";
@@ -49,9 +49,9 @@ namespace RedXuCSharpClass
 		public HttpHelper()
 		{
 			_headers.Clear();
-			//随机一个useragent
+			//random useragent
 			_useragent = _useragents[new Random().Next(0,_useragents.Length)];
-			//解决性能问题?
+			//Solving performance problems?
 			ServicePointManager.DefaultConnectionLimit = ConnectionLimit;
 		}
 		
@@ -63,7 +63,7 @@ namespace RedXuCSharpClass
 		}
 		
 		/// <summary>
-		/// 设置当前编码
+		/// set the current encoding
 		/// </summary>
 		/// <param name="en"></param>
 		public void SetEncoding(Encoding en)
@@ -72,7 +72,7 @@ namespace RedXuCSharpClass
 		}
 		
 		/// <summary>
-		/// 设置UserAgent
+		/// set up UserAgent
 		/// </summary>
 		/// <param name="ua"></param>
 		public void SetUserAgent(String ua)
@@ -91,7 +91,7 @@ namespace RedXuCSharpClass
 		}
 		
 		/// <summary>
-		/// 设置超时时间
+		/// set timeout
 		/// </summary>
 		/// <param name="sec"></param>
 		public void SetTimeOut(int msec)
@@ -110,7 +110,7 @@ namespace RedXuCSharpClass
 		}
 		
 		/// <summary>
-		/// 添加自定义头
+		/// add custom header
 		/// </summary>
 		/// <param name="key"></param>
 		/// <param name="ctx"></param>
@@ -121,7 +121,7 @@ namespace RedXuCSharpClass
 		}
 		
 		/// <summary>
-		/// 清空自定义头
+		/// Empty custom headers
 		/// </summary>
 		public void ClearHeader()
 		{
@@ -129,7 +129,7 @@ namespace RedXuCSharpClass
 		}
 		
 		/// <summary>
-		/// 获取HTTP返回的内容
+		///Get the content returned by HTTP
 		/// </summary>
 		/// <param name="response"></param>
 		/// <returns></returns>
@@ -154,7 +154,7 @@ namespace RedXuCSharpClass
 		}
 		
 		/// <summary>
-		/// 检测证书
+		/// test certificate
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="certificate"></param>
@@ -167,7 +167,7 @@ namespace RedXuCSharpClass
 		}
 		
 		/// <summary>
-		/// 发送GET请求
+		/// Send a GET request
 		/// </summary>
 		/// <param name="url"></param>
 		/// <returns></returns>
@@ -178,7 +178,7 @@ namespace RedXuCSharpClass
 		
 		
 		/// <summary>
-		/// 发送GET请求
+		/// Send a GET request
 		/// </summary>
 		/// <param name="url"></param>
 		/// <param name="refer"></param>
@@ -245,7 +245,7 @@ namespace RedXuCSharpClass
 		}
 		
 		/// <summary>
-		/// 获取MINE文件
+		/// Get the MINE file
 		/// </summary>
 		/// <param name="url"></param>
 		/// <returns></returns>
@@ -324,7 +324,7 @@ namespace RedXuCSharpClass
 		}
 		
 		/// <summary>
-		/// 发送POST请求
+		/// Send a POST request
 		/// </summary>
 		/// <param name="url"></param>
 		/// <param name="data"></param>
@@ -335,7 +335,7 @@ namespace RedXuCSharpClass
 		}
 		
 		/// <summary>
-		/// 发送POST请求
+		/// Send a POST request
 		/// </summary>
 		/// <param name="url"></param>
 		/// <param name="data"></param>
