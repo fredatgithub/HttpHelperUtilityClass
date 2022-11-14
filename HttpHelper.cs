@@ -200,7 +200,7 @@ namespace RedXuCSharpClass
 				request.AllowAutoRedirect = true;
 				request.UnsafeAuthenticatedConnectionSharing = true;
 				request.CookieContainer = new CookieContainer();
-				//据说能提高性能
+				//It is said to improve performance
 				request.Proxy = null;
 				if(_cookiecollection != null)
 				{
@@ -266,7 +266,7 @@ namespace RedXuCSharpClass
 				request.AllowAutoRedirect = true;
 				request.UnsafeAuthenticatedConnectionSharing = true;
 				request.CookieContainer = new CookieContainer();
-				//据说能提高性能
+				//It is said to improve performance
 				request.Proxy = null;
 				if(_cookiecollection != null)
 				{
@@ -420,7 +420,7 @@ namespace RedXuCSharpClass
         }
 		
 		/// <summary>
-		/// 转换cookie字符串到CookieCollection
+		/// Convert cookie string to CookieCollection
 		/// </summary>
 		/// <param name="ck"></param>
 		/// <returns></returns>
